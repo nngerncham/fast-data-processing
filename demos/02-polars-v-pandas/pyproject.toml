@@ -1,0 +1,17 @@
+[project]
+name = "02-polars-v-pandas"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "dask>=2025.7.0",
+    "pandas>=2.2,<2.3",
+    "pandas-stubs>=2.3.0.250703",
+    "polars>=1.32.2",
+    "pyarrow>=21.0.0",
+]
+
+
+[tool.ruff]
+line-length=120
