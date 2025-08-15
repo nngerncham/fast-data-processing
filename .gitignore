@@ -1,3 +1,4 @@
 target
-*.csv
+*results.csv
+*result.csv
 dataset/*/
