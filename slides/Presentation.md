@@ -4,18 +4,6 @@ paginate: true
 math: katex
 style: |
   @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-  .meme { 
-    margin-top: 0.5cm;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  },
-  .report {
-    max-height: 100%;
-    max-width: 100%;
-    margin: auto;
-    display: block
-  },
   code {
     font-family: 'Source Code Pro', monospace;
   }
@@ -396,11 +384,25 @@ lf1.join(lf2, how="cross").filter(
 
 - How do you process data fast? Depends :D
 - Should you use Polars? Depends :D
-- Will Polars get you closer to Nagoya 2026? Depends :D
+- Will Polars get you closer to Nagoya 2026? Depends :DDD
 
 ---
 
-# Please use Polars !! :DDDDDDDDDDDD
+# One more thing...
+
+---
+
+# One more thing... DuckDB!
+
+- Comparable performance with Polars
+- SQL-based
+- Ducks are cute :)
+
+---
+
+# Please use Polars!!
+
+<img src="assets/pleading.jpg" height=500px/>
 
 ---
 
