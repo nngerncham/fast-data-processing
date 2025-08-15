@@ -33,23 +33,6 @@ if __name__ == "__main__":
         csv_writer.writerow(["func_type", "run_idx", "run_time"])
 
         print(datetime.datetime.now().isoformat())
-        print("Running built-in benchmark")
-        polars_times = [
-            (
-                "builtin",
-                i + 1,
-                run_once(
-                    input_file,
-                    "../../outputs/03/builtin_results.csv",
-                    i + 1,
-                    process_once_polars,
-                ),
-            )
-            for i in range(N_RUNS)
-        ]
-        csv_writer.writerows(polars_times)
-
-        print(datetime.datetime.now().isoformat())
         print("Running custom benchmark")
         polars_times = [
             (
@@ -60,6 +43,23 @@ if __name__ == "__main__":
                     "../../outputs/03/custom_results.csv",
                     i + 1,
                     process_once_polars_df,
+                ),
+            )
+            for i in range(N_RUNS)
+        ]
+        csv_writer.writerows(polars_times)
+
+        print(datetime.datetime.now().isoformat())
+        print("Running built-in benchmark")
+        polars_times = [
+            (
+                "builtin",
+                i + 1,
+                run_once(
+                    input_file,
+                    "../../outputs/03/builtin_results.csv",
+                    i + 1,
+                    process_once_polars,
                 ),
             )
             for i in range(N_RUNS)

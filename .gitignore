@@ -1,3 +1,3 @@
-!dataset/enron-emails/.keep
-!dataset/steam-reviews/.keep
 target
+*.csv
+dataset/*/

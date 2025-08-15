@@ -1,11 +1,11 @@
 # Downloading the datasets
 
-Make sure that you have the [`kaggle`](https://github.com/Kaggle/kaggle-api) CLI tool for some of these.
+Make sure that you have the [`kaggle` CLI tool](https://github.com/Kaggle/kaggle-api) set up for some of these.
 
 - Enron email data set
   ```sh
-  curl -o enron-emails/ https://www.cs.cmu.edu/~enron/enron_mail_20150507.tar.gz
-  tar -xf enron_mail_20250507.tar.gz -C enron-emails/
+  wget -P enron-emails/ https://www.cs.cmu.edu/\~enron/enron_mail_20150507.tar.gz
+  tar -xf enron_mail_20210507.tar.gz -C enron-emails/
   ```
   ```
   ```

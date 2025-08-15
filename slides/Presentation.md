@@ -144,6 +144,7 @@ an unscientific ranking by Dr. Piti Ongmongkolkul (my physics(??????) professor)
 ## Faster than Pandas with out-of-the-box parallelism
 
 **Goal**: Find out the following for each game from the [Steam Game Reviews](https://www.kaggle.com/datasets/najzeko/steam-reviews-2021)
+**Data size**: ~21M reviews
 
 - percentage of players who recommends the game
 - average all-time play time of all reviewers

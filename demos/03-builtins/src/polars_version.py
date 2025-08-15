@@ -83,8 +83,13 @@ def process_once_polars_df(raw_file_path: str) -> pl.DataFrame:
         filtered_words = [word for word in split_word if word not in WORDS_TO_IGNORE]
         return filtered_words
 
-    def aggregate_reviews(all_review_words: list[list[str]]) -> Optional[str]:
-        flat_words = [word for review_words in all_review_words for word in review_words]
+    def aggregate_reviews(all_review_words: Optional[list[list[str]]]) -> Optional[str]:
+        if all_review_words is None:
+            return None
+
+        valid_reviews = (review_words for review_words in all_review_words if review_words is not None)
+        flat_words = (word for valid_review in valid_reviews for word in valid_review if word is not None)
+
         counter = Counter(flat_words)
         most_common_words = counter.most_common(1)
         return most_common_words[0][0] if len(most_common_words) > 0 else None
@@ -99,5 +104,4 @@ def process_once_polars_df(raw_file_path: str) -> pl.DataFrame:
     )
 
     sorted_lf = processed_lf.sort(by=["game_name"], descending=[False])
-    print(sorted_lf.collect())
     return sorted_lf.collect()
