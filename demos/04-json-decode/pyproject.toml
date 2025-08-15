@@ -1,0 +1,7 @@
+[project]
+name = "04-json-decode"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["polars>=1.32.3"]
